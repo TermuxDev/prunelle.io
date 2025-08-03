@@ -1,23 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monsite</title>
+    <title>Prunelle | Développeuse Web</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #95c7e9;
-            color: #333;
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+        * {
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            box-sizing: border-box;
         }
-        h1 {
-            color: #e7e7e7;
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #6C63FF, #FF6584);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 20px;
+            animation: fadeDown 1.5s ease-in-out;
+        }
+
+        header h1 {
+            font-size: 3em;
+            animation: glow 2s infinite alternate;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+
+        .about {
+            max-width: 900px;
+            margin: 50px auto;
+            text-align: center;
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            animation: fadeUp 1.5s ease-in-out;
+        }
+
+        .skills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .skill {
+            background: rgba(255,255,255,0.15);
+            padding: 15px 25px;
+            border-radius: 25px;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .skill:hover {
+            transform: scale(1.1);
+            background: rgba(255,255,255,0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            font-size: 0.9em;
+            opacity: 0.7;
+        }
+
+        /* Animations */
+        @keyframes fadeDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 5px white, 0 0 10px white; }
+            to { text-shadow: 0 0 20px #fff, 0 0 30px #FF6584, 0 0 40px #FF6584; }
         }
     </style>
 </head>
 <body>
-    <h1>Bienvenue sur le site de Prunelle.</h1>
+
+    <header>
+        <h1>✨ Prunelle ✨</h1>
+        <p>Développeuse Web créative & passionnée 💻</p>
+    </header>
+
+    <section class="about">
+        <h2>À propos</h2>
+        <p>
+            Bonjour, je suis <strong>Prunelle</strong>, une développeuse web qui aime donner vie aux idées 
+            avec du code clair, élégant et performant.  
+            Mon objectif : créer des expériences uniques et engageantes pour les utilisateurs.
+        </p>
+
+        <div class="skills">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Python</div>
+            <div class="skill">React</div>
+        </div>
+    </section>
+
+    <footer>
+        © 2025 Prunelle | Fait avec ❤️ par TermuxDev
+    </footer>
+
 </body>
 </html>
